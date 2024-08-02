@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "name": "G.B. Pant Hospital Blood bank",
     "loc": "Port Blair, Andaman And Nicobar Islands",
     "add": "Atlanta Point\nNear Cellular Jail\nP.O. Aberdeen Bazaar",
@@ -12,6 +13,7 @@
     "long": 92.747338
   },
   {
+    "id":"2",
     "name": "I.N.H.S. Dhanvantri",
     "loc": "Port Blair, Andaman And Nicobar Islands",
     "add": "Ashvini Nagar, Port Blair, Andaman and Nicobar Islands.",
