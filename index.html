@@ -82,6 +82,13 @@
         a:hover {
             text-decoration: underline;
         }
+        .example {
+            font-family: monospace;
+            background: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -94,6 +101,7 @@
                     <th>Path</th>
                     <th>Method</th>
                     <th>Description</th>
+                    <th>Example</th>
                 </tr>
             </thead>
             <tbody>
@@ -101,31 +109,37 @@
                     <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank" target="_blank">/bloodbank</a></td>
                     <td data-label="Method">GET</td>
                     <td data-label="Description">Retrieve all blood banks information.</td>
+                    <td data-label="Example" class="example"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank" target="_blank">/bloodbank</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank/{id}" target="_blank">/bloodbank/{id}</a></td>
+                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank/127" target="_blank">/bloodbank/{id}</a></td>
                     <td data-label="Method">GET</td>
                     <td data-label="Description">Retrieve specific blood bank information by ID.</td>
+                    <td data-label="Example" class="example"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank/127" target="_blank">/bloodbank/127</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank?name={name}&loc={loc}&add={add}" target="_blank">/bloodbank?name={name}&loc={loc}&add={add}</a></td>
+                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank?name=Kailash" target="_blank">/bloodbank?name={name}&loc={loc}&add={add}</a></td>
                     <td data-label="Method">GET</td>
                     <td data-label="Description">Filter blood banks by name, location, and address.</td>
+                    <td data-label="Example" class="example"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank?name=Kailash&loc=Vadodara&add=Goraj" target="_blank">/bloodbank?name=Kailash&loc=Vadodara&add=Goraj</a></td>
                 </tr>
                 <tr>
                     <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/donor" target="_blank">/donor</a></td>
                     <td data-label="Method">GET</td>
                     <td data-label="Description">Retrieve all donor information.</td>
+                    <td data-label="Example" class="example"><a href="https://info-api.hetprajapati80.workers.dev/donor" target="_blank">/donor</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/donor/{id}" target="_blank">/donor/{id}</a></td>
+                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/donor/51" target="_blank">/donor/{id}</a></td>
                     <td data-label="Method">GET</td>
                     <td data-label="Description">Retrieve specific donor information by ID.</td>
+                    <td data-label="Example" class="example"><a href="https://info-api.hetprajapati80.workers.dev/donor/51" target="_blank">/donor/51</a></td>
                 </tr>
                 <tr>
-                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/donor?location={location}&bloodgroup={bloodgroup}" target="_blank">/donor?location={location}&bloodgroup={bloodgroup}</a></td>
+                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/donor?location=Vadodara&bloodgroup=A+" target="_blank">/donor?location={location}&bloodgroup={bloodgroup}</a></td>
                     <td data-label="Method">GET</td>
                     <td data-label="Description">Filter donors by location and blood group.</td>
+                    <td data-label="Example" class="example"><a href="https://info-api.hetprajapati80.workers.dev/donor?location=Vadodara&bloodgroup=A+" target="_blank">/donor?location=Vadodara&bloodgroup=A+</a></td>
                 </tr>
             </tbody>
         </table>
