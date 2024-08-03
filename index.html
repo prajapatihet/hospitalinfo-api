@@ -19,24 +19,28 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
         }
-        h1 {
+        h1, h2 {
             color: #4CAF50;
             text-align: center;
             margin-bottom: 20px;
         }
+        h3 {
+            color: #333;
+            margin-top: 20px;
+        }
         p {
-            text-align: center;
             font-size: 1.2em;
+            line-height: 1.6;
         }
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            border-radius: 8px;
-            overflow: hidden;
         }
         table, th, td {
             border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
         }
         th, td {
             padding: 15px;
@@ -49,38 +53,18 @@
         tr:nth-child(even) {
             background-color: #f2f2f2;
         }
-        @media (max-width: 768px) {
-            table, thead, tbody, th, td, tr {
-                display: block;
-                width: 100%;
-            }
-            thead tr {
-                display: none;
-            }
-            tr {
-                margin-bottom: 15px;
-            }
-            td {
-                text-align: right;
-                padding-left: 50%;
-                position: relative;
-            }
-            td::before {
-                content: attr(data-label);
-                position: absolute;
-                left: 0;
-                width: 50%;
-                padding-left: 15px;
-                font-weight: bold;
-                text-align: left;
-            }
-        }
         a {
             color: #4CAF50;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
+        }
+        .instructions {
+            background: #f9f9f9;
+            padding: 10px;
+            border-left: 5px solid #4CAF50;
+            margin-top: 10px;
         }
         .example {
             font-family: monospace;
@@ -94,55 +78,93 @@
 <body>
     <div class="container">
         <h1>API Information</h1>
-        <p>This API provides the following endpoints:</p>
+
+        <h2>Available Endpoints</h2>
         <table>
             <thead>
                 <tr>
                     <th>Path</th>
                     <th>Method</th>
                     <th>Description</th>
-                    <th>Example</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank" target="_blank">/bloodbank</a></td>
-                    <td data-label="Method">GET</td>
-                    <td data-label="Description">Retrieve all blood banks information.</td>
-                    <td data-label="Example" class="example"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank" target="_blank">/bloodbank</a></td>
+                    <td><a href="https://info-api.hetprajapati80.workers.dev/bloodbank" target="_blank">/bloodbank</a></td>
+                    <td>GET</td>
+                    <td>Retrieve all blood banks information.</td>
                 </tr>
                 <tr>
-                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank/127" target="_blank">/bloodbank/{id}</a></td>
-                    <td data-label="Method">GET</td>
-                    <td data-label="Description">Retrieve specific blood bank information by ID.</td>
-                    <td data-label="Example" class="example"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank/127" target="_blank">/bloodbank/127</a></td>
+                    <td><a href="https://info-api.hetprajapati80.workers.dev/bloodbank/{id}" target="_blank">/bloodbank/{id}</a></td>
+                    <td>GET</td>
+                    <td>Retrieve specific blood bank information by ID.</td>
                 </tr>
                 <tr>
-                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank?name=Kailash" target="_blank">/bloodbank?name={name}&loc={loc}&add={add}</a></td>
-                    <td data-label="Method">GET</td>
-                    <td data-label="Description">Filter blood banks by name, location, and address.</td>
-                    <td data-label="Example" class="example"><a href="https://info-api.hetprajapati80.workers.dev/bloodbank?name=Kailash&loc=Vadodara&add=Goraj" target="_blank">/bloodbank?name=Kailash&loc=Vadodara&add=Goraj</a></td>
+                    <td><a href="https://info-api.hetprajapati80.workers.dev/bloodbank?name={name}&loc={loc}&add={add}" target="_blank">/bloodbank?name={name}&loc={loc}&add={add}</a></td>
+                    <td>GET</td>
+                    <td>Filter blood banks by name, location, and address.</td>
                 </tr>
                 <tr>
-                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/donor" target="_blank">/donor</a></td>
-                    <td data-label="Method">GET</td>
-                    <td data-label="Description">Retrieve all donor information.</td>
-                    <td data-label="Example" class="example"><a href="https://info-api.hetprajapati80.workers.dev/donor" target="_blank">/donor</a></td>
+                    <td><a href="https://info-api.hetprajapati80.workers.dev/donor" target="_blank">/donor</a></td>
+                    <td>GET</td>
+                    <td>Retrieve all donor information.</td>
                 </tr>
                 <tr>
-                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/donor/51" target="_blank">/donor/{id}</a></td>
-                    <td data-label="Method">GET</td>
-                    <td data-label="Description">Retrieve specific donor information by ID.</td>
-                    <td data-label="Example" class="example"><a href="https://info-api.hetprajapati80.workers.dev/donor/51" target="_blank">/donor/51</a></td>
+                    <td><a href="https://info-api.hetprajapati80.workers.dev/donor/{id}" target="_blank">/donor/{id}</a></td>
+                    <td>GET</td>
+                    <td>Retrieve specific donor information by ID.</td>
                 </tr>
                 <tr>
-                    <td data-label="Path"><a href="https://info-api.hetprajapati80.workers.dev/donor?location=Vadodara&bloodgroup=A+" target="_blank">/donor?location={location}&bloodgroup={bloodgroup}</a></td>
-                    <td data-label="Method">GET</td>
-                    <td data-label="Description">Filter donors by location and blood group.</td>
-                    <td data-label="Example" class="example"><a href="https://info-api.hetprajapati80.workers.dev/donor?location=Vadodara&bloodgroup=A+" target="_blank">/donor?location=Vadodara&bloodgroup=A+</a></td>
+                    <td><a href="https://info-api.hetprajapati80.workers.dev/donor?location={location}&bloodgroup={bloodgroup}" target="_blank">/donor?location={location}&bloodgroup={bloodgroup}</a></td>
+                    <td>GET</td>
+                    <td>Filter donors by location and blood group.</td>
                 </tr>
             </tbody>
         </table>
+
+        <h2>How to Use the API</h2>
+
+        <h3>1. Retrieve All Blood Banks Information</h3>
+        <p>To retrieve all blood banks information, you need to send a GET request to the following endpoint:</p>
+        <div class="instructions">
+            <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank" target="_blank">/bloodbank</a></p>
+            <p>Example Request: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank" target="_blank">https://info-api.hetprajapati80.workers.dev/bloodbank</a></p>
+        </div>
+
+        <h3>2. Retrieve Specific Blood Bank Information by ID</h3>
+        <p>To retrieve information for a specific blood bank by ID, use this endpoint:</p>
+        <div class="instructions">
+            <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank/{id}" target="_blank">/bloodbank/{id}</a></p>
+            <p>Example Request: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank/127" target="_blank">https://info-api.hetprajapati80.workers.dev/bloodbank/127</a></p>
+        </div>
+
+        <h3>3. Filter Blood Banks by Name, Location, and Address</h3>
+        <p>To filter blood banks based on name, location, and address, use the following endpoint with query parameters:</p>
+        <div class="instructions">
+            <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank?name={name}&loc={loc}&add={add}" target="_blank">/bloodbank?name={name}&loc={loc}&add={add}</a></p>
+            <p>Example Request: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank?name=Kailash&loc=Vadodara&add=Goraj" target="_blank">https://info-api.hetprajapati80.workers.dev/bloodbank?name=Kailash&loc=Vadodara&add=Goraj</a></p>
+        </div>
+
+        <h3>4. Retrieve All Donor Information</h3>
+        <p>To get a list of all donors, send a GET request to:</p>
+        <div class="instructions">
+            <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/donor" target="_blank">/donor</a></p>
+            <p>Example Request: <a href="https://info-api.hetprajapati80.workers.dev/donor" target="_blank">https://info-api.hetprajapati80.workers.dev/donor</a></p>
+        </div>
+
+        <h3>5. Retrieve Specific Donor Information by ID</h3>
+        <p>To access information for a specific donor by ID, use this endpoint:</p>
+        <div class="instructions">
+            <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/donor/{id}" target="_blank">/donor/{id}</a></p>
+            <p>Example Request: <a href="https://info-api.hetprajapati80.workers.dev/donor/51" target="_blank">https://info-api.hetprajapati80.workers.dev/donor/51</a></p>
+        </div>
+
+        <h3>6. Filter Donors by Location and Blood Group</h3>
+        <p>To filter donors based on location and blood group, use this endpoint:</p>
+        <div class="instructions">
+            <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/donor?location={location}&bloodgroup={bloodgroup}" target="_blank">/donor?location={location}&bloodgroup={bloodgroup}</a></p>
+            <p>Example Request: <a href="https://info-api.hetprajapati80.workers.dev/donor?location=Vadodara&bloodgroup=A+" target="_blank">https://info-api.hetprajapati80.workers.dev/donor?location=Vadodara&bloodgroup=A+</a></p>
+        </div>
     </div>
 </body>
 </html>
