@@ -6,11 +6,11 @@
     <title>API Information</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #e9ecef;
-            color: #495057;
+            background-color: #f5f5f5;
+            color: #333;
         }
         .container {
             max-width: 900px;
@@ -21,17 +21,18 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h1, h2 {
-            color: #007bff;
-            text-align: center;
+            color: #1976d2;
             margin-bottom: 20px;
+            font-weight: 400;
         }
         h3 {
-            color: #343a40;
+            color: #424242;
             margin-top: 20px;
+            font-weight: 500;
         }
         p {
-            font-size: 1.1em;
-            line-height: 1.6;
+            font-size: 1em;
+            line-height: 1.5;
         }
         table {
             width: 100%;
@@ -39,8 +40,8 @@
             margin-top: 20px;
         }
         table, th, td {
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
             overflow: hidden;
         }
         th, td {
@@ -48,54 +49,52 @@
             text-align: left;
         }
         th {
-            background-color: #007bff;
+            background-color: #1976d2;
             color: white;
         }
         tr:nth-child(even) {
-            background-color: #f8f9fa;
+            background-color: #fafafa;
         }
         a {
-            color: #007bff;
+            color: #1976d2;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
         .instructions {
-            background: #f8f9fa;
+            background: #f9f9f9;
             padding: 15px;
-            border-left: 5px solid #007bff;
+            border-left: 4px solid #1976d2;
             margin-top: 10px;
-            border-radius: 5px;
+            border-radius: 4px;
         }
         .example {
-            font-family: monospace;
-            background: #f1f3f5;
+            font-family: 'Roboto Mono', monospace;
+            background: #f1f3f4;
             padding: 10px;
-            border-radius: 5px;
+            border-radius: 4px;
             margin-top: 5px;
             display: block;
         }
-        .example a {
-            color: #007bff;
-        }
         .card {
             background: #ffffff;
-            border: 1px solid #dee2e6;
+            border: 1px solid #e0e0e0;
             border-radius: 8px;
             padding: 20px;
             margin-top: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .card h3 {
-            color: #007bff;
+            color: #1976d2;
             margin-top: 0;
+            font-weight: 500;
         }
         .card p {
             margin: 0;
         }
         .card a {
-            color: #007bff;
+            color: #1976d2;
             font-weight: bold;
         }
     </style>
@@ -201,7 +200,7 @@
             <h3>5. Retrieve Specific Donor Information by ID</h3>
             <p>To access information for a specific donor by ID, use this endpoint:</p>
             <div class="instructions">
-                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/donor/{id}" target="_blank">/donor/{id}</a></p>
+                                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/donor/{id}" target="_blank">/donor/{id}</a></p>
             </div>
             <h3>Example Request:</h3>
             <div class="example">
@@ -223,3 +222,4 @@
     </div>
 </body>
 </html>
+
