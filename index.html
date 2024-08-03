@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API Information</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #e9ecef;
+            color: #495057;
         }
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 40px auto;
             padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
             border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         h1, h2 {
-            color: #4CAF50;
+            color: #007bff;
             text-align: center;
             margin-bottom: 20px;
         }
         h3 {
-            color: #333;
+            color: #343a40;
             margin-top: 20px;
         }
         p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             line-height: 1.6;
         }
         table {
@@ -38,40 +39,64 @@
             margin-top: 20px;
         }
         table, th, td {
-            border: 1px solid #ddd;
+            border: 1px solid #dee2e6;
             border-radius: 8px;
             overflow: hidden;
         }
         th, td {
-            padding: 15px;
+            padding: 12px;
             text-align: left;
         }
         th {
-            background-color: #4CAF50;
+            background-color: #007bff;
             color: white;
         }
         tr:nth-child(even) {
-            background-color: #f2f2f2;
+            background-color: #f8f9fa;
         }
         a {
-            color: #4CAF50;
+            color: #007bff;
             text-decoration: none;
         }
         a:hover {
             text-decoration: underline;
         }
         .instructions {
-            background: #f9f9f9;
-            padding: 10px;
-            border-left: 5px solid #4CAF50;
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 5px solid #007bff;
             margin-top: 10px;
+            border-radius: 5px;
         }
         .example {
             font-family: monospace;
-            background: #f2f2f2;
+            background: #f1f3f5;
             padding: 10px;
             border-radius: 5px;
             margin-top: 5px;
+            display: block;
+        }
+        .example a {
+            color: #007bff;
+        }
+        .card {
+            background: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card h3 {
+            color: #007bff;
+            margin-top: 0;
+        }
+        .card p {
+            margin: 0;
+        }
+        .card a {
+            color: #007bff;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -124,46 +149,52 @@
 
         <h2>How to Use the API</h2>
 
-        <h3>1. Retrieve All Blood Banks Information</h3>
-        <p>To retrieve all blood banks information, you need to send a GET request to the following endpoint:</p>
-        <div class="instructions">
-            <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank" target="_blank">/bloodbank</a></p>
-            <p>Example Request: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank" target="_blank">https://info-api.hetprajapati80.workers.dev/bloodbank</a></p>
+        <div class="card">
+            <h3>1. Retrieve All Blood Banks Information</h3>
+            <p>To retrieve all blood banks information, send a GET request to:</p>
+            <div class="instructions">
+                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank" target="_blank">/bloodbank</a></p>
+            </div>
         </div>
 
-        <h3>2. Retrieve Specific Blood Bank Information by ID</h3>
-        <p>To retrieve information for a specific blood bank by ID, use this endpoint:</p>
-        <div class="instructions">
-            <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank/{id}" target="_blank">/bloodbank/{id}</a></p>
-            <p>Example Request: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank/127" target="_blank">https://info-api.hetprajapati80.workers.dev/bloodbank/127</a></p>
+        <div class="card">
+            <h3>2. Retrieve Specific Blood Bank Information by ID</h3>
+            <p>To get information for a specific blood bank by ID, use this endpoint:</p>
+            <div class="instructions">
+                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank/{id}" target="_blank">/bloodbank/{id}</a></p>
+            </div>
         </div>
 
-        <h3>3. Filter Blood Banks by Name, Location, and Address</h3>
-        <p>To filter blood banks based on name, location, and address, use the following endpoint with query parameters:</p>
-        <div class="instructions">
-            <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank?name={name}&loc={loc}&add={add}" target="_blank">/bloodbank?name={name}&loc={loc}&add={add}</a></p>
-            <p>Example Request: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank?name=Kailash&loc=Vadodara&add=Goraj" target="_blank">https://info-api.hetprajapati80.workers.dev/bloodbank?name=Kailash&loc=Vadodara&add=Goraj</a></p>
+        <div class="card">
+            <h3>3. Filter Blood Banks by Name, Location, and Address</h3>
+            <p>To filter blood banks based on name, location, and address, use the following endpoint:</p>
+            <div class="instructions">
+                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/bloodbank?name={name}&loc={loc}&add={add}" target="_blank">/bloodbank?name={name}&loc={loc}&add={add}</a></p>
+            </div>
         </div>
 
-        <h3>4. Retrieve All Donor Information</h3>
-        <p>To get a list of all donors, send a GET request to:</p>
-        <div class="instructions">
-            <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/donor" target="_blank">/donor</a></p>
-            <p>Example Request: <a href="https://info-api.hetprajapati80.workers.dev/donor" target="_blank">https://info-api.hetprajapati80.workers.dev/donor</a></p>
+        <div class="card">
+            <h3>4. Retrieve All Donor Information</h3>
+            <p>To get a list of all donors, send a GET request to:</p>
+            <div class="instructions">
+                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/donor" target="_blank">/donor</a></p>
+            </div>
         </div>
 
-        <h3>5. Retrieve Specific Donor Information by ID</h3>
-        <p>To access information for a specific donor by ID, use this endpoint:</p>
-        <div class="instructions">
-            <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/donor/{id}" target="_blank">/donor/{id}</a></p>
-            <p>Example Request: <a href="https://info-api.hetprajapati80.workers.dev/donor/51" target="_blank">https://info-api.hetprajapati80.workers.dev/donor/51</a></p>
+        <div class="card">
+            <h3>5. Retrieve Specific Donor Information by ID</h3>
+            <p>To access information for a specific donor by ID, use this endpoint:</p>
+            <div class="instructions">
+                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/donor/{id}" target="_blank">/donor/{id}</a></p>
+            </div>
         </div>
 
-        <h3>6. Filter Donors by Location and Blood Group</h3>
-        <p>To filter donors based on location and blood group, use this endpoint:</p>
-        <div class="instructions">
-            <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/donor?location={location}&bloodgroup={bloodgroup}" target="_blank">/donor?location={location}&bloodgroup={bloodgroup}</a></p>
-            <p>Example Request: <a href="https://info-api.hetprajapati80.workers.dev/donor?location=Vadodara&bloodgroup=A+" target="_blank">https://info-api.hetprajapati80.workers.dev/donor?location=Vadodara&bloodgroup=A+</a></p>
+        <div class="card">
+            <h3>6. Filter Donors by Location and Blood Group</h3>
+            <p>To filter donors based on location and blood group, use this endpoint:</p>
+            <div class="instructions">
+                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/donor?location={location}&bloodgroup={bloodgroup}" target="_blank">/donor?location={location}&bloodgroup={bloodgroup}</a></p>
+            </div>
         </div>
     </div>
 </body>
