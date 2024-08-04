@@ -5,7 +5,7 @@
         "description":"Blood Donation Drive",
         "date":"2024-03-16",
         "time":"10:00",
-        "venue":"Vadodara",
+        "location":"Vadodara",
         "lat": 23.020595,
         "long": 72.571659
     },
@@ -15,7 +15,7 @@
         "description":"Blood Donation Drive",
         "date":"2024-03-16",
         "time":"10:00",
-        "venue":"Surat",
+        "location":"Surat",
         "lat": 23.020595,
         "long": 72.571659
     },
@@ -25,7 +25,7 @@
         "description":"Blood Donation Drive",
         "date":"2024-03-16",
         "time":"10:00",
-        "venue":"Ahmedabad",
+        "location":"Ahmedabad",
         "lat": 23.020595,
         "long": 72.571659
     }
