@@ -143,6 +143,36 @@
                     <td>GET</td>
                     <td>Filter donors by location and blood group.</td>
                 </tr>
+                <tr>
+                    <td><a href="https://info-api.hetprajapati80.workers.dev/camps" target="_blank">/camps</a></td>
+                    <td>GET</td>
+                    <td>Retrieve all blood donation camps information.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://info-api.hetprajapati80.workers.dev/camps/{id}" target="_blank">/camps/{id}</a></td>
+                    <td>GET</td>
+                    <td>Retrieve specific blood donation camp information by ID.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://info-api.hetprajapati80.workers.dev/camps?location={location}" target="_blank">/camps?location={location}</a></td>
+                    <td>GET</td>
+                    <td>Filter blood donation camps by location.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://info-api.hetprajapati80.workers.dev/events" target="_blank">/events</a></td>
+                    <td>GET</td>
+                    <td>Retrieve all events information.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://info-api.hetprajapati80.workers.dev/events/{id}" target="_blank">/events/{id}</a></td>
+                    <td>GET</td>
+                    <td>Retrieve specific event information by ID.</td>
+                </tr>
+                <tr>
+                    <td><a href="https://info-api.hetprajapati80.workers.dev/events?location={location}" target="_blank">/events?location={location}</a></td>
+                    <td>GET</td>
+                    <td>Filter events by location.</td>
+                </tr>
             </tbody>
         </table>
 
@@ -200,7 +230,7 @@
             <h3>5. Retrieve Specific Donor Information by ID</h3>
             <p>To access information for a specific donor by ID, use this endpoint:</p>
             <div class="instructions">
-                                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/donor/{id}" target="_blank">/donor/{id}</a></p>
+                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/donor/{id}" target="_blank">/donor/{id}</a></p>
             </div>
             <h3>Example Request:</h3>
             <div class="example">
@@ -219,7 +249,79 @@
                 GET <a href="https://info-api.hetprajapati80.workers.dev/donor?location=Vadodara&bloodgroup=A+" target="_blank">https://info-api.hetprajapati80.workers.dev/donor?location=Vadodara&bloodgroup=A+</a>
             </div>
         </div>
+
+        <div class="card">
+            <h3>7. Retrieve All Blood Donation Camps Information</h3>
+            <p>To retrieve all blood donation camps information, send a GET request to:</p>
+            <div class="instructions">
+                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/camps" target="_blank">/camps</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://info-api.hetprajapati80.workers.dev/camps" target="_blank">https://info-api.hetprajapati80.workers.dev/camps</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>8. Retrieve Specific Blood Donation Camp Information by ID</h3>
+            <p>To get information for a specific blood donation camp by ID, use this endpoint:</p>
+            <div class="instructions">
+                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/camps/{id}" target="_blank">/camps/{id}</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://info-api.hetprajapati80.workers.dev/camps/127" target="_blank">https://info-api.hetprajapati80.workers.dev/camps/127</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>9. Filter Blood Donation Camps by Location</h3>
+            <p>To filter blood donation camps based on location, use the following endpoint:</p>
+            <div class="instructions">
+                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/camps?location={location}" target="_blank">/camps?location={location}</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://info-api.hetprajapati80.workers.dev/camps?location=Vadodara" target="_blank">https://info-api.hetprajapati80.workers.dev/camps?location=Vadodara</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>10. Retrieve All Events Information</h3>
+            <p>To retrieve all events information, send a GET request to:</p>
+            <div class="instructions">
+                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/events" target="_blank">/events</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://info-api.hetprajapati80.workers.dev/events" target="_blank">https://info-api.hetprajapati80.workers.dev/events</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>11. Retrieve Specific Event Information by ID</h3>
+            <p>To get information for a specific event by ID, use this endpoint:</p>
+            <div class="instructions">
+                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/events/{id}" target="_blank">/events/{id}</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://info-api.hetprajapati80.workers.dev/events/51" target="_blank">https://info-api.hetprajapati80.workers.dev/events/51</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>12. Filter Events by Location</h3>
+            <p>To filter events based on location, use this endpoint:</p>
+            <div class="instructions">
+                <p>Endpoint: <a href="https://info-api.hetprajapati80.workers.dev/events?location={location}" target="_blank">/events?location={location}</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://info-api.hetprajapati80.workers.dev/events?location=Vadodara" target="_blank">https://info-api.hetprajapati80.workers.dev/events?location=Vadodara</a>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>
-
