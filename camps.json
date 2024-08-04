@@ -1,0 +1,32 @@
+[
+    {
+        "id":"1",
+        "name":"Health check-ups",
+        "description":"Blood Donation Drive",
+        "date":"2024-03-16",
+        "time":"10:00",
+        "venue":"Vadodara",
+        "lat": 23.020595,
+        "long": 72.571659
+    },
+    {
+        "id":"2",
+        "name":"Health check-ups",
+        "description":"Blood Donation Drive",
+        "date":"2024-03-16",
+        "time":"10:00",
+        "venue":"Surat",
+        "lat": 23.020595,
+        "long": 72.571659
+    },
+    {
+        "id":"3",
+        "name":"Health check-ups",
+        "description":"Blood Donation Drive",
+        "date":"2024-03-16",
+        "time":"10:00",
+        "venue":"Ahmedabad",
+        "lat": 23.020595,
+        "long": 72.571659
+    }
+]

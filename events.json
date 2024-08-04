@@ -1,0 +1,42 @@
+[
+    {
+        "id":"1",
+        "name":"Blood Donation Drive By SSG",
+        "description":"Blood Donation Drive",
+        "date":"2024-03-16",
+        "time":"10:00",
+        "location":"Vadodara",
+        "lat": 23.020595,
+        "long": 72.571659
+    },
+    {
+        "id":"2",
+        "name":"Blood Donation Drive By Zydus",
+        "description":"Blood Donation Drive",
+        "date":"2024-03-16",
+        "time":"10:00",
+        "location":"Surat",
+        "lat": 23.020595,
+        "long": 72.571659
+    },
+    {
+        "id":"3",
+        "name":"Blood Donation Drive By Government",
+        "description":"Blood Donation Drive",
+        "date":"2024-03-16",
+        "time":"10:00",
+        "location":"Kutch",
+        "lat": 23.020595,
+        "long": 72.571659
+    },
+    {
+        "id":"4",
+        "name":"Blood Donation Drive By private",
+        "description":"Blood Donation Drive",
+        "date":"2024-03-16",
+        "time":"10:00",
+        "location":"Ahmedabad",
+        "lat": 23.020595,
+        "long": 72.571659
+    }
+]
