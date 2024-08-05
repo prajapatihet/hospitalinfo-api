@@ -41,6 +41,10 @@
             line-height: 1.5;
         }
 
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -51,8 +55,6 @@
         th,
         td {
             border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            overflow: hidden;
         }
 
         th,
@@ -64,6 +66,9 @@
         th {
             background-color: #1976d2;
             color: white;
+            position: sticky;
+            top: 0;
+            z-index: 2;
         }
 
         tr:nth-child(even) {
@@ -183,6 +188,11 @@
                 padding: 10px;
             }
         }
+
+        .sortable:hover {
+            cursor: pointer;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -191,50 +201,52 @@
         <h1>API Information</h1>
 
         <h2>Available Endpoints</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Component</th>
-                    <th>Path</th>
-                    <th>Method</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td data-label="Component">Accordions</td>
-                    <td data-label="Path"><a
-                            href="https://components-api.hetprajapati80.workers.dev/components/accordions/accordions.json"
-                            target="_blank">/accordions/accordions.json</a></td>
-                    <td data-label="Method">GET</td>
-                    <td data-label="Description">Retrieve information about Accordions components.</td>
-                </tr>
-                <tr>
-                    <td data-label="Component">Backgrounds</td>
-                    <td data-label="Path"><a
-                            href="https://components-api.hetprajapati80.workers.dev/components/backgrounds/backgrounds.json"
-                            target="_blank">/backgrounds/backgrounds.json</a></td>
-                    <td data-label="Method">GET</td>
-                    <td data-label="Description">Retrieve information about Backgrounds components.</td>
-                </tr>
-                <tr>
-                    <td data-label="Component">Breadcrumbs</td>
-                    <td data-label="Path"><a
-                            href="https://components-api.hetprajapati80.workers.dev/components/breadcrumbs/breadcrumbs.json"
-                            target="_blank">/breadcrumbs/breadcrumbs.json</a></td>
-                    <td data-label="Method">GET</td>
-                    <td data-label="Description">Retrieve information about Breadcrumbs components.</td>
-                </tr>
-                <tr>
-                    <td data-label="Component">Buttons</td>
-                    <td data-label="Path"><a
-                            href="https://components-api.hetprajapati80.workers.dev/components/buttons/buttons.json"
-                            target="_blank">/buttons/buttons.json</a></td>
-                    <td data-label="Method">GET</td>
-                    <td data-label="Description">Retrieve information about Buttons components.</td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="sortable" onclick="sortTable(0)">Component</th>
+                        <th class="sortable" onclick="sortTable(1)">Path</th>
+                        <th class="sortable" onclick="sortTable(2)">Method</th>
+                        <th class="sortable" onclick="sortTable(3)">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Component">Accordions</td>
+                        <td data-label="Path"><a
+                                href="https://components-api.hetprajapati80.workers.dev/components/accordions/accordions.json"
+                                target="_blank">/accordions/accordions.json</a></td>
+                        <td data-label="Method">GET</td>
+                        <td data-label="Description">Retrieve information about Accordions components.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Component">Backgrounds</td>
+                        <td data-label="Path"><a
+                                href="https://components-api.hetprajapati80.workers.dev/components/backgrounds/backgrounds.json"
+                                target="_blank">/backgrounds/backgrounds.json</a></td>
+                        <td data-label="Method">GET</td>
+                        <td data-label="Description">Retrieve information about Backgrounds components.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Component">Breadcrumbs</td>
+                        <td data-label="Path"><a
+                                href="https://components-api.hetprajapati80.workers.dev/components/breadcrumbs/breadcrumbs.json"
+                                target="_blank">/breadcrumbs/breadcrumbs.json</a></td>
+                        <td data-label="Method">GET</td>
+                        <td data-label="Description">Retrieve information about Breadcrumbs components.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Component">Buttons</td>
+                        <td data-label="Path"><a
+                                href="https://components-api.hetprajapati80.workers.dev/components/buttons/buttons.json"
+                                target="_blank">/buttons/buttons.json</a></td>
+                        <td data-label="Method">GET</td>
+                        <td data-label="Description">Retrieve information about Buttons components.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <h2>How to Use the API</h2>
 
@@ -299,6 +311,23 @@
         </div>
 
     </div>
+
+    <script>
+        function sortTable(columnIndex) {
+            const table = document.querySelector("table tbody");
+            const rows = Array.from(table.querySelectorAll("tr"));
+
+            const sortedRows = rows.sort((a, b) => {
+                const aText = a.querySelector(`td:nth-child(${columnIndex + 1})`).textContent.trim();
+                const bText = b.querySelector(`td:nth-child(${columnIndex + 1})`).textContent.trim();
+
+                return aText.localeCompare(bText);
+            });
+
+            table.innerHTML = "";
+            sortedRows.forEach(row => table.appendChild(row));
+        }
+    </script>
 </body>
 
 </html>
