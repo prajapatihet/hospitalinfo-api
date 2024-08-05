@@ -131,36 +131,51 @@
                 padding: 10px;
             }
 
+            .table-wrapper {
+                overflow-x: visible;
+            }
+
             table,
+            thead,
+            tbody,
             th,
-            td {
+            td,
+            tr {
                 display: block;
-                width: 100%;
-                box-sizing: border-box;
+            }
+
+            tr {
+                margin-bottom: 15px;
             }
 
             th,
             td {
+                padding: 10px 15px;
                 text-align: right;
-                padding-left: 50%;
                 position: relative;
-            }
-
-            th::before,
-            td::before {
-                content: attr(data-label);
-                position: absolute;
-                left: 10px;
-                width: calc(50% - 20px);
-                padding-left: 10px;
-                text-align: left;
-                font-weight: bold;
-                white-space: nowrap;
             }
 
             th {
                 background-color: transparent;
                 color: #333;
+            }
+
+            td {
+                border: none;
+                border-bottom: 1px solid #e0e0e0;
+                text-align: left;
+                padding-left: 50%;
+                text-align: right;
+            }
+
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 15px;
+                width: calc(50% - 30px);
+                text-align: left;
+                font-weight: bold;
+                white-space: nowrap;
             }
 
             tr:nth-child(even) {
