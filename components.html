@@ -94,6 +94,7 @@
             border-radius: 4px;
             margin-top: 5px;
             display: block;
+            overflow-x: auto;
         }
 
         .card {
@@ -119,6 +120,69 @@
             color: #1976d2;
             font-weight: bold;
         }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            table,
+            th,
+            td {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            th,
+            td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+
+            th::before,
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                width: calc(50% - 20px);
+                padding-left: 10px;
+                text-align: left;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            th {
+                background-color: transparent;
+                color: #333;
+            }
+
+            tr:nth-child(even) {
+                background-color: transparent;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1,
+            h2 {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+
+            h3 {
+                font-size: 1.2em;
+                margin-top: 10px;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            .card {
+                padding: 10px;
+            }
+        }
     </style>
 </head>
 
@@ -138,25 +202,36 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Accordions</td>
-                    <td><a href="https://components-api.hetprajapati80.workers.dev/components/accordions/accordions.json"
+                    <td data-label="Component">Accordions</td>
+                    <td data-label="Path"><a
+                            href="https://components-api.hetprajapati80.workers.dev/components/accordions/accordions.json"
                             target="_blank">/accordions/accordions.json</a></td>
-                    <td>GET</td>
-                    <td>Retrieve information about Accordions components.</td>
+                    <td data-label="Method">GET</td>
+                    <td data-label="Description">Retrieve information about Accordions components.</td>
                 </tr>
                 <tr>
-                    <td>Backgrounds</td>
-                    <td><a href="https://components-api.hetprajapati80.workers.dev/components/backgrounds/backgrounds.json"
+                    <td data-label="Component">Backgrounds</td>
+                    <td data-label="Path"><a
+                            href="https://components-api.hetprajapati80.workers.dev/components/backgrounds/backgrounds.json"
                             target="_blank">/backgrounds/backgrounds.json</a></td>
-                    <td>GET</td>
-                    <td>Retrieve information about Backgrounds components.</td>
+                    <td data-label="Method">GET</td>
+                    <td data-label="Description">Retrieve information about Backgrounds components.</td>
                 </tr>
                 <tr>
-                    <td>Breadcrumbs</td>
-                    <td><a href="https://components-api.hetprajapati80.workers.dev/components/breadcrumbs/breadcrumbs.json"
+                    <td data-label="Component">Breadcrumbs</td>
+                    <td data-label="Path"><a
+                            href="https://components-api.hetprajapati80.workers.dev/components/breadcrumbs/breadcrumbs.json"
                             target="_blank">/breadcrumbs/breadcrumbs.json</a></td>
-                    <td>GET</td>
-                    <td>Retrieve information about Breadcrumbs components.</td>
+                    <td data-label="Method">GET</td>
+                    <td data-label="Description">Retrieve information about Breadcrumbs components.</td>
+                </tr>
+                <tr>
+                    <td data-label="Component">Buttons</td>
+                    <td data-label="Path"><a
+                            href="https://components-api.hetprajapati80.workers.dev/components/buttons/buttons.json"
+                            target="_blank">/buttons/buttons.json</a></td>
+                    <td data-label="Method">GET</td>
+                    <td data-label="Description">Retrieve information about Buttons components.</td>
                 </tr>
             </tbody>
         </table>
@@ -205,6 +280,21 @@
             <div class="example">
                 GET <a href="https://components-api.hetprajapati80.workers.dev/components/breadcrumbs/breadcrumbs.json"
                     target="_blank">https://components-api.hetprajapati80.workers.dev/components/breadcrumbs/breadcrumbs.json</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>4. Retrieve Information About Buttons Components</h3>
+            <p>To retrieve information about Buttons components, send a GET request to:</p>
+            <div class="instructions">
+                <p>Endpoint: <a
+                        href="https://components-api.hetprajapati80.workers.dev/components/buttons/buttons.json"
+                        target="_blank">/components/buttons/buttons.json</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://components-api.hetprajapati80.workers.dev/components/buttons/buttons.json"
+                    target="_blank">https://components-api.hetprajapati80.workers.dev/components/buttons/buttons.json</a>
             </div>
         </div>
 
