@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Information</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #1976d2;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        h3 {
+            color: #424242;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1976d2;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .instructions {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #1976d2;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .example {
+            font-family: 'Roboto Mono', monospace;
+            background: #f1f3f4;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        .card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #1976d2;
+            margin-top: 0;
+            font-weight: 500;
+        }
+
+        .card p {
+            margin: 0;
+        }
+
+        .card a {
+            color: #1976d2;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>API Information</h1>
+
+        <h2>Available Endpoints</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Path</th>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Accordions</td>
+                    <td><a href="https://components-api.hetprajapati80.workers.dev/components/accordions/accordions.json"
+                            target="_blank">/accordions/accordions.json</a></td>
+                    <td>GET</td>
+                    <td>Retrieve information about Accordions components.</td>
+                </tr>
+                <tr>
+                    <td>Backgrounds</td>
+                    <td><a href="https://components-api.hetprajapati80.workers.dev/components/backgrounds/backgrounds.json"
+                            target="_blank">/backgrounds/backgrounds.json</a></td>
+                    <td>GET</td>
+                    <td>Retrieve information about Backgrounds components.</td>
+                </tr>
+                <tr>
+                    <td>Breadcrumbs</td>
+                    <td><a href="https://components-api.hetprajapati80.workers.dev/components/breadcrumbs/breadcrumbs.json"
+                            target="_blank">/breadcrumbs/breadcrumbs.json</a></td>
+                    <td>GET</td>
+                    <td>Retrieve information about Breadcrumbs components.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>How to Use the API</h2>
+
+        <div class="card">
+            <h3>1. Retrieve Information About Accordions Components</h3>
+            <p>To retrieve information about Accordions components, send a GET request to:</p>
+            <div class="instructions">
+                <p>Endpoint: <a
+                        href="https://components-api.hetprajapati80.workers.dev/components/accordions/accordions.json"
+                        target="_blank">/components/accordions/accordions.json</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://components-api.hetprajapati80.workers.dev/components/accordions/accordions.json"
+                    target="_blank">https://components-api.hetprajapati80.workers.dev/components/accordions/accordions.json</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>2. Retrieve Information About Backgrounds Components</h3>
+            <p>To retrieve information about Backgrounds components, send a GET request to:</p>
+            <div class="instructions">
+                <p>Endpoint: <a
+                        href="https://components-api.hetprajapati80.workers.dev/components/backgrounds/backgrounds.json"
+                        target="_blank">/components/backgrounds/backgrounds.json</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://components-api.hetprajapati80.workers.dev/components/backgrounds/backgrounds.json"
+                    target="_blank">https://components-api.hetprajapati80.workers.dev/components/backgrounds/backgrounds.json</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>3. Retrieve Information About Breadcrumbs Components</h3>
+            <p>To retrieve information about Breadcrumbs components, send a GET request to:</p>
+            <div class="instructions">
+                <p>Endpoint: <a
+                        href="https://components-api.hetprajapati80.workers.dev/components/breadcrumbs/breadcrumbs.json"
+                        target="_blank">/components/breadcrumbs/breadcrumbs.json</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://components-api.hetprajapati80.workers.dev/components/breadcrumbs/breadcrumbs.json"
+                    target="_blank">https://components-api.hetprajapati80.workers.dev/components/breadcrumbs/breadcrumbs.json</a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
