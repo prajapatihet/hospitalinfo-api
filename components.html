@@ -203,11 +203,6 @@
                 padding: 10px;
             }
         }
-
-        .sortable:hover {
-            cursor: pointer;
-            text-decoration: underline;
-        }
     </style>
 </head>
 
@@ -220,10 +215,10 @@
             <table>
                 <thead>
                     <tr>
-                        <th class="sortable" onclick="sortTable(0)">Component</th>
-                        <th class="sortable" onclick="sortTable(1)">Path</th>
-                        <th class="sortable" onclick="sortTable(2)">Method</th>
-                        <th class="sortable" onclick="sortTable(3)">Description</th>
+                        <th>Component</th>
+                        <th>Path</th>
+                        <th>Method</th>
+                        <th>Description</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -258,6 +253,38 @@
                                 target="_blank">/buttons/buttons.json</a></td>
                         <td data-label="Method">GET</td>
                         <td data-label="Description">Retrieve information about Buttons components.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Component">Carousels</td>
+                        <td data-label="Path"><a
+                                href="https://components-api.hetprajapati80.workers.dev/components/carousels/carousels.json"
+                                target="_blank">/carousels/carousels.json</a></td>
+                        <td data-label="Method">GET</td>
+                        <td data-label="Description">Retrieve information about Carousels components.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Component">Dropdowns</td>
+                        <td data-label="Path"><a
+                                href="https://components-api.hetprajapati80.workers.dev/components/dropdowns/dropdowns.json"
+                                target="_blank">/dropdowns/dropdowns.json</a></td>
+                        <td data-label="Method">GET</td>
+                        <td data-label="Description">Retrieve information about Dropdowns components.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Component">Footers</td>
+                        <td data-label="Path"><a
+                                href="https://components-api.hetprajapati80.workers.dev/components/footers/footers.json"
+                                target="_blank">/footers/footers.json</a></td>
+                        <td data-label="Method">GET</td>
+                        <td data-label="Description">Retrieve information about Footers components.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Component">Forms</td>
+                        <td data-label="Path"><a
+                                href="https://components-api.hetprajapati80.workers.dev/components/forms/forms.json"
+                                target="_blank">/forms/forms.json</a></td>
+                        <td data-label="Method">GET</td>
+                        <td data-label="Description">Retrieve information about Forms components.</td>
                     </tr>
                 </tbody>
             </table>
@@ -325,24 +352,66 @@
             </div>
         </div>
 
+        <div class="card">
+            <h3>5. Retrieve Information About Carousels Components</h3>
+            <p>To retrieve information about Carousels components, send a GET request to:</p>
+            <div class="instructions">
+                <p>Endpoint: <a
+                        href="https://components-api.hetprajapati80.workers.dev/components/carousels/carousels.json"
+                        target="_blank">/components/carousels/carousels.json</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://components-api.hetprajapati80.workers.dev/components/carousels/carousels.json"
+                    target="_blank">https://components-api.hetprajapati80.workers.dev/components/carousels/carousels.json</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>6. Retrieve Information About Dropdowns Components</h3>
+            <p>To retrieve information about Dropdowns components, send a GET request to:</p>
+            <div class="instructions">
+                <p>Endpoint: <a
+                        href="https://components-api.hetprajapati80.workers.dev/components/dropdowns/dropdowns.json"
+                        target="_blank">/components/dropdowns/dropdowns.json</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://components-api.hetprajapati80.workers.dev/components/dropdowns/dropdowns.json"
+                    target="_blank">https://components-api.hetprajapati80.workers.dev/components/dropdowns/dropdowns.json</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>7. Retrieve Information About Footers Components</h3>
+            <p>To retrieve information about Footers components, send a GET request to:</p>
+            <div class="instructions">
+                <p>Endpoint: <a
+                        href="https://components-api.hetprajapati80.workers.dev/components/footers/footers.json"
+                        target="_blank">/components/footers/footers.json</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://components-api.hetprajapati80.workers.dev/components/footers/footers.json"
+                    target="_blank">https://components-api.hetprajapati80.workers.dev/components/footers/footers.json</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>8. Retrieve Information About Forms Components</h3>
+            <p>To retrieve information about Forms components, send a GET request to:</p>
+            <div class="instructions">
+                <p>Endpoint: <a
+                        href="https://components-api.hetprajapati80.workers.dev/components/forms/forms.json"
+                        target="_blank">/components/forms/forms.json</a></p>
+            </div>
+            <h3>Example Request:</h3>
+            <div class="example">
+                GET <a href="https://components-api.hetprajapati80.workers.dev/components/forms/forms.json"
+                    target="_blank">https://components-api.hetprajapati80.workers.dev/components/forms/forms.json</a>
+            </div>
+        </div>
     </div>
-
-    <script>
-        function sortTable(columnIndex) {
-            const table = document.querySelector("table tbody");
-            const rows = Array.from(table.querySelectorAll("tr"));
-
-            const sortedRows = rows.sort((a, b) => {
-                const aText = a.querySelector(`td:nth-child(${columnIndex + 1})`).textContent.trim();
-                const bText = b.querySelector(`td:nth-child(${columnIndex + 1})`).textContent.trim();
-
-                return aText.localeCompare(bText);
-            });
-
-            table.innerHTML = "";
-            sortedRows.forEach(row => table.appendChild(row));
-        }
-    </script>
 </body>
 
 </html>
